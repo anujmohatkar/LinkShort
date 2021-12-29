@@ -3,7 +3,6 @@ class LinksController < ApplicationController
   def create
     shortener = Shortener.new(link_params[:original_url])
     @link = shortener.generate_short_link
-    binding.pry
   end
 
   private
